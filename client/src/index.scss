@@ -7,6 +7,8 @@
 }
 
 body {
+  overflow-x: hidden;
+
   width: 100vw;
   overflow-x: hidden;
   font-family: Poppins -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
@@ -17,7 +19,9 @@ body {
 }
 
 :root {
-  --primary: #131a34;
+  --primary: #192451;
   --bg: #f6f8f9;
   --dark-grey: #919194;
+  --light-grey: #919194;
+  --red: #e46251;
 }

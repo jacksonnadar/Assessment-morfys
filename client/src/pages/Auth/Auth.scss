@@ -1,0 +1,32 @@
+.Auth {
+  --left-margin: 5rem;
+  header {
+    margin-left: var(--left-margin);
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    p {
+      margin-left: 4rem;
+      font-size: 0.92rem;
+      color: var(--primary);
+    }
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .illustration {
+      position: relative;
+      .decor {
+        position: absolute;
+      }
+      .plus {
+        bottom: -2rem;
+        left: 0;
+      }
+      .dots {
+        bottom: -8rem;
+        right: -7rem;
+      }
+    }
+  }
+}

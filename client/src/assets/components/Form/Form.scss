@@ -1,0 +1,78 @@
+.Form {
+  margin-left: var(--left-margin);
+  margin-top: 4rem;
+  &__title {
+    font-size: 2rem;
+    font-weight: normal;
+    color: var(--primary);
+  }
+  &__subtitle {
+    font-size: 1.1rem;
+    color: var(--light-grey);
+    margin-top: 1.5rem;
+  }
+  .auth-form {
+    &__container {
+      margin-top: 1.5rem;
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      .input-container {
+        display: flex;
+        flex-direction: column;
+        label {
+          color: var(--primary);
+          margin-bottom: 0.8rem;
+        }
+        input {
+          width: 75%;
+          border: none;
+          border-bottom: 1px solid var(--light-grey);
+          padding: 0.5rem;
+          font-size: 1.1rem;
+          color: var(--primary);
+          &:active,
+          &:focus {
+            outline: none;
+            background-color: #f6f8f9;
+          }
+        }
+        .pass {
+          display: flex;
+          align-items: center;
+          .hid-icon {
+            img {
+              transform: translateX(-150%) scale(0.7);
+            }
+            .fade {
+              opacity: 0.3;
+            }
+          }
+        }
+      }
+      .message {
+        font-size: 0.9rem;
+        color: var(--red);
+      }
+    }
+    .bottom-text {
+      cursor: pointer;
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-weight: normal;
+      color: var(--primary);
+    }
+  }
+  .primary-btn {
+    margin-top: 1rem;
+    background-color: var(--primary);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    color: #ffffff;
+    letter-spacing: 1.6px;
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+  }
+}
