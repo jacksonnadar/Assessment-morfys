@@ -18,7 +18,7 @@ const Form: React.FC<Props> = () => {
     password: '',
   });
   const [isPasshid, setIsPasshid] = useState(true);
-  const [isRegister, setIsRegister] = useState(true);
+  const [isRegister, setIsRegister] = useState(false);
   const [message, setMessage] = useState('');
 
   const inputOnChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {

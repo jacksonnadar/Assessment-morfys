@@ -1,0 +1,43 @@
+.DashBoardHeader {
+  height: 4rem;
+  box-shadow: 0px 2px 8px #0000001a;
+  width: 100%;
+  display: flex;
+  padding-left: 1.5rem;
+  background-color: #fff;
+  .sub-logo {
+    display: flex;
+    align-items: center;
+    img {
+      width: 3rem;
+    }
+  }
+  .texts {
+    margin-left: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    .title {
+      margin-top: 0.6rem;
+      font-size: 1.3rem;
+      font-weight: normal;
+    }
+    .options {
+      font-size: 0.92rem;
+      font-weight: 300;
+      color: var(--light-grey);
+      display: flex;
+      column-gap: 2.2rem;
+      .option {
+        cursor: pointer;
+        padding-bottom: 0.3rem;
+        &:nth-child(2) {
+          border-bottom: 2px solid #131a34;
+          color: #131a34;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

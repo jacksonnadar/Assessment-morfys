@@ -14,6 +14,9 @@ export const register = async (
     });
     const data = await response.json();
     setMessage(data.message);
+    localStorage.setItem('jwtToken', data.accessToken);
+    const redirectURL = data?.redirectURL;
+    window.location.href = redirectURL;
     console.log(data);
   } catch (err) {
     console.log(err);
@@ -37,8 +40,37 @@ export const login = async (
     });
     const data = await response.json();
     setMessage(data.message);
+    localStorage.setItem('jwtToken', data.accessToken);
+    const redirectURL = data?.redirectURL;
+    window.location.href = redirectURL;
     console.log(data);
   } catch (err) {
     console.log(err.message, 'hello');
+  }
+};
+export interface UsersInterface {
+  date: string;
+  _id: string;
+  name: string;
+  email: string;
+  password: string;
+  __v: number;
+}
+
+export const getAllUsers = async () => {
+  try {
+    const accessToken = localStorage.getItem('jwtToken');
+    const response = await fetch('http://localhost:8080/users/', {
+      headers: new Headers({
+        authorization: `Bearer ${accessToken}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      }),
+    });
+    const data: UsersInterface = await response.json();
+    console.log(data);
+    return data;
+  } catch (err) {
+    console.log(err);
+    return null;
   }
 };

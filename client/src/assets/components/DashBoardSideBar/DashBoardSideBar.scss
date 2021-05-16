@@ -1,0 +1,108 @@
+.DashBoardSideBar {
+  --text-color: #c2c6d9;
+  --bg: #131a34;
+  background-color: var(--bg);
+  min-height: 100vh;
+  width: var(--sideBar-width);
+  color: var(--text-color);
+  z-index: 2;
+  &__top {
+    border-bottom: 0.2px solid #8c8f9770;
+
+    .svgs {
+      height: 4rem;
+      background-color: #fff;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &__logo {
+        width: 7rem;
+      }
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 1rem;
+
+      .link {
+        display: flex;
+        padding: 0.7rem 1.5rem;
+        cursor: pointer;
+
+        h3 {
+          margin-left: 0.6rem;
+          font-size: 0.9rem;
+          font-weight: normal;
+        }
+      }
+      .active,
+      .link:hover {
+        background-color: #323c61;
+      }
+    }
+  }
+  &__middle {
+    padding: 1.5rem;
+    .title {
+      font-size: 1rem;
+      color: #7e849f;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+    .team-members-container {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.9rem;
+      .team-member {
+        display: grid;
+        grid-template-rows: 1.4fr 0.6fr;
+        grid-template-columns: 1.9rem calc(100% - 1.9rem);
+        cursor: pointer;
+
+        .avatar {
+          grid-row: 1 / span 2;
+          width: 1.9rem;
+          height: 1.9rem;
+          background-color: var(--text-color);
+          border-radius: 50%;
+        }
+        .name {
+          padding-left: 0.8rem;
+          font-size: 1rem;
+          font-weight: normal;
+          color: var(--text-color);
+        }
+        .post {
+          font-size: 0.8rem;
+          color: #7e849f;
+          padding-left: 0.8rem;
+        }
+      }
+    }
+  }
+  &__bottom {
+    position: sticky;
+    bottom: 0;
+    background-color: var(--bg);
+    z-index: 2;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    border-top: 0.2px solid #8c8f9770;
+    row-gap: 1.3rem;
+    .settings,
+    .auth {
+      display: flex;
+      cursor: pointer;
+      color: var(--text-color);
+      text-decoration: none;
+
+      p {
+        margin-left: 0.9rem;
+      }
+    }
+  }
+}
